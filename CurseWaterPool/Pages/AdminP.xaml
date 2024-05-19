@@ -1,0 +1,32 @@
+﻿<Page x:Class="CurseWaterPool.Pages.AdminP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CurseWaterPool.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminP">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="600"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Name="TolBarGrid">
+            <Grid x:Name="GridButtonsBar" >
+                <StackPanel>
+                    <Button x:Name="EmployeeBT" Content="Управление сотрудниками" Margin="10,5" Click="EmployeeBT_Click"/>
+                    <Button x:Name="SubscriprionBT" Content="Управление абонементами" Margin="10,5" Click="SubscriprionBT_Click"/>
+                    <Button x:Name="PoolListBT" Content="Список бассейнов" Margin="10,5" Click="PoolListBT_Click"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Bottom">
+                    <Button x:Name="BackBT" Content="Выйти" Margin="10,5" Click="BackBT_Click"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Image Width="200" Source="/Source/WaterPoolLogo.jpg" />
+        </Grid>
+    </Grid>
+</Page>
