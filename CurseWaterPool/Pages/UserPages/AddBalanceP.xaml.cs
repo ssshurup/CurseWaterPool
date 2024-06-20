@@ -38,6 +38,11 @@ namespace CurseWaterPool.Pages.UserPages
         {
             try
             {
+                if (Convert.ToInt32(SumTB.Text) <= 0)
+                {
+                    MessageBox.Show("Неверно введена сумма");
+                    return;
+                }
                 context.balance += Convert.ToInt32(SumTB.Text);
                 App.DB.SaveChanges();
                 NavigationService.Navigate(new ProfileP());
